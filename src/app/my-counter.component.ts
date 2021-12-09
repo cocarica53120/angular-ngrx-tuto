@@ -9,19 +9,19 @@ import { Store } from '@ngrx/store';
 export class MyCounterComponent {
   count$: Observable<number>;
 
-  constructor(private store: Store<{ count: Number }>) {
+  constructor(private store: Store<{ count: number }>) {
     this.count$ = store.select('count');
   }
 
-  increment() {
+  increment(): any {
     this.store.dispatch(this.increment());
   }
 
-  decrement() {
+  decrement(): any {
     this.store.dispatch(this.decrement());
   }
 
-  reset() {
+  reset(): any {
     this.store.dispatch(this.reset());
   }
 }
